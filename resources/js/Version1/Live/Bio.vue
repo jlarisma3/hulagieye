@@ -46,7 +46,7 @@
             </div>
             <div class="lg:pl-20">
               <ul role="list">
-                <li v-for="(item, i) in social" :key="item.name" :class="{'mt-4' : i != 0}" class="flex">
+                <li v-for="(item, i) in social" :key="item.name" :class="{'mt-4' : i != 0, 'mt-8 border-t border-gray-100 pt-8' : item.name == 'Email'}" class="flex">
                   <a :href="item.href" class="group flex text-sm font-medium text-gray-600 transition hover:text-gray-700">
                     <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                     <span v-if="item.name != 'Email'" class="ml-4">Follow me on {{ item.name }}</span>

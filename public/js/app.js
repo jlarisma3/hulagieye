@@ -28259,7 +28259,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {
               key: item.name,
               "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
-                'mt-4': i != 0
+                'mt-4': i != 0,
+                'mt-8 border-t border-gray-100 pt-8': item.name == 'Email'
               }, "flex"])
             }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
               href: item.href,
