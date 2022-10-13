@@ -24,7 +24,19 @@ use Inertia\Inertia;
     ]);
 });*/
 
-Route::get('/', [\App\Http\Controllers\Live\MainController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\Live\MainController::class, 'index'])
+    ->name('home');
+
+Route::get('/bio', [\App\Http\Controllers\Live\MainController::class, 'index'])
+     ->name('bio');
+
+Route::get('/gallery', [\App\Http\Controllers\Live\MainController::class, 'index'])
+     ->name('gallery');
+
+Route::get('/contact-info', [\App\Http\Controllers\Live\MainController::class, 'index'])
+     ->name('contact-info');
+
+
 
 
 Route::middleware([

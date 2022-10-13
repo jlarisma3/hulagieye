@@ -17,8 +17,8 @@
 
               <div class="hidden md:ml-6 md:flex md:space-x-8">
                 <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-                <a v-for="item in navigation" :href="item.link" :key="item.name" :class="{'border-b-2 border-gray-500' : item.name == 'Bio'}" class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700">
-                  {{ item.name }}
+                <a v-for="item in $page.props.navigations" :href="item.route" :key="item.title" :class="{'border-b-2 border-gray-500' : item.pageName == $page.props.page_name}" class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-700">
+                  {{ item.title }}
                 </a>
               </div>
             </div>
@@ -26,8 +26,8 @@
 
           <disclosure-panel class="md:hidden">
             <div class="space-y-1 pt-2 pb-3">
-              <disclosure-button v-for="item in navigation" :href="item.link" :key="item.name" as="a" :class="{'border-l-4 border-gray-500 bg-gray-50 text-gray-700': item.name == 'Bio'}" class="block text-gray-700 py-2 pl-3 pr-4 text-sm font-medium sm:pl-5 sm:pr-6">
-                {{ item.name }}
+              <disclosure-button v-for="item in $page.props.navigations" :href="item.route" :key="item.title" as="a" :class="{'border-l-4 border-gray-500 bg-gray-50 text-gray-700': item.pageName == $page.props.pageName}" class="block text-gray-700 py-2 pl-3 pr-4 text-sm font-medium sm:pl-5 sm:pr-6">
+                {{ item.title }}
               </disclosure-button>
             </div>
           </disclosure-panel>
@@ -80,6 +80,10 @@ export default {
       navigation
     }
   },
+
+  mounted() {
+    console.log(this.$page.props.navigations);
+  }
 }
 </script>
 

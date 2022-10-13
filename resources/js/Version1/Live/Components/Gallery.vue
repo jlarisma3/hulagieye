@@ -10,10 +10,4 @@
 
 <script>
 
-export default {
-
-  mounted() {
-    console.log(this.$page.props.images);
-  }
-}
 </script>

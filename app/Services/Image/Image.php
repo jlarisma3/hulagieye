@@ -2,8 +2,12 @@
 
 namespace App\Services\Image;
 
+use App\Services\Traits\Attribute;
+
 class Image
 {
+    use Attribute;
+
     private $height;
 
     private $width;
@@ -16,27 +20,10 @@ class Image
 
     public function __construct(array $attributes)
     {
-        foreach ($attributes as $prop => $value) {
-            //if(property_exists(get_class($this), $this->{$prop}))
-                $this->{$prop} = $value;
+        $fn = function ($class) {
+            $this->isPortrait = $class->width > $class->height;
+        };
 
-            $this->isPortrait = $this->width > $this->height;
-        }
+        $this->init($attributes, $fn);
     }
-
-    /**
-     * @param array $attributes
-     *
-     * @return array|mixed
-     */
-    public function get(array $attributes)
-    {
-        $pub = [];
-        foreach ($attributes as $prop) {
-            $pub[$prop] = $this->{$prop};
-        }
-
-        return $pub;
-    }
-
 }
