@@ -24555,71 +24555,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var products = [{
-  id: 1,
-  name: 'Earthen Bottle',
-  href: '#',
-  price: '$48',
-  imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
-  imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.'
-}, {
-  id: 2,
-  name: 'Nomad Tumbler',
-  href: '#',
-  price: '$35',
-  imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
-  imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.'
-}, {
-  id: 3,
-  name: 'Focus Paper Refill',
-  href: '#',
-  price: '$89',
-  imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg',
-  imageAlt: 'Person using a pen to cross a task off a productivity paper card.'
-}, {
-  id: 4,
-  name: 'Machined Mechanical Pencil',
-  href: '#',
-  price: '$35',
-  imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
-  imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.'
-}, {
-  id: 1,
-  name: 'Earthen Bottle',
-  href: '#',
-  price: '$48',
-  imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
-  imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.'
-}, {
-  id: 2,
-  name: 'Nomad Tumbler',
-  href: '#',
-  price: '$35',
-  imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
-  imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.'
-}, {
-  id: 3,
-  name: 'Focus Paper Refill',
-  href: '#',
-  price: '$89',
-  imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg',
-  imageAlt: 'Person using a pen to cross a task off a productivity paper card.'
-}, {
-  id: 4,
-  name: 'Machined Mechanical Pencil',
-  href: '#',
-  price: '$35',
-  imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
-  imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.'
-}
-// More products...
-];
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  computed: {
-    path: function path() {
-      return window.publicPath + '/storage/gallery/';
-    }
+  mounted: function mounted() {
+    console.log(this.$page.props.images);
   }
 });
 
@@ -28289,23 +28227,18 @@ var _hoisted_1 = {
   "class": "bg-white"
 };
 var _hoisted_2 = {
-  "class": "grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
+  "class": "gap-3 columns-1 lg:columns-4 md:columns-2 space-y-3"
 };
-var _hoisted_3 = {
-  "class": "aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8"
-};
-var _hoisted_4 = ["src"];
+var _hoisted_3 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(16, function (n, index) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-      key: n,
-      href: "#",
-      "class": "group"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-      src: $options.path + n + '.jpg',
-      "class": "h-full w-full object-cover object-center group-hover:opacity-75"
-    }, null, 8 /* PROPS */, _hoisted_4)])]);
-  }), 64 /* STABLE_FRAGMENT */))])]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.$page.props.images, function (item) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+      key: item.name,
+      "class": "break-inside-avoid"
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+      src: item.path
+    }, null, 8 /* PROPS */, _hoisted_3)]);
+  }), 128 /* KEYED_FRAGMENT */))])]);
 }
 
 /***/ }),
@@ -28366,7 +28299,7 @@ var _hoisted_2 = {
 };
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl"
-}, " Software engineer, Street photographer, and sometimes medical doctor. ", -1 /* HOISTED */);
+}, " Software engineer, Street photographer, and frustrated culinarian. ", -1 /* HOISTED */);
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "mt-6 text-base text-zinc-600"
 }, " I'm Joe, senior software engineer and amateur street photographer based in Cebu City Philippines. I give medical advises for I am also a graduate from University of Google College of Medicine. ", -1 /* HOISTED */);
