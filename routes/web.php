@@ -27,7 +27,7 @@ use Inertia\Inertia;
 Route::get('/', [\App\Http\Controllers\Live\MainController::class, 'index'])
     ->name('home');
 
-Route::get('/bio', [\App\Http\Controllers\Live\MainController::class, 'index'])
+Route::get('/bio', [\App\Http\Controllers\Live\MainController::class, 'bio'])
      ->name('bio');
 
 Route::get('/gallery', [\App\Http\Controllers\Live\MainController::class, 'index'])

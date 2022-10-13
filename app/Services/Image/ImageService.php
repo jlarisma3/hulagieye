@@ -14,9 +14,9 @@ class ImageService
     /**
      * @return $this
      */
-    public function readFromDisk()
+    public function readFromDisk($directory = null)
     {
-        $files = Storage::disk('public')->allFiles(self::DIRECTORY);
+        $files = Storage::disk('public')->allFiles($directory ?? self::DIRECTORY);
         foreach ($files as $file) {
             $o = getimagesize(storage_path('app/public/') . $file);
             $this->images[] = (new Image([
