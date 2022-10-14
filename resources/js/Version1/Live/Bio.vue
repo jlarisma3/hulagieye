@@ -16,7 +16,7 @@
             <div class="lg:order-first lg:row-span-2">
               <div class="max-w-2xl">
                 <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl">
-                  Software engineer, Street photographer, and frustrated culinarian.
+                  I'm Joe Larisma. A proud lumad from Cebu City.
                 </h1>
                 <p class="mt-6 text-base text-zinc-600">
                   I'm Joe, senior software engineer and amateur street photographer based in Cebu City Philippines. I give medical
