@@ -64,4 +64,9 @@ class MainController extends Controller
 
         return Inertia::render('Live/Bio', $this->pageData['data']);
     }
+
+    public function gallery(Request $request)
+    {
+        return Inertia::render('Live/Gallery', $this->pageData['data']);
+    }
 }

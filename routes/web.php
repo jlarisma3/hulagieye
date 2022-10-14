@@ -30,7 +30,7 @@ Route::get('/', [\App\Http\Controllers\Live\MainController::class, 'index'])
 Route::get('/bio', [\App\Http\Controllers\Live\MainController::class, 'bio'])
      ->name('bio');
 
-Route::get('/gallery', [\App\Http\Controllers\Live\MainController::class, 'index'])
+Route::get('/gallery', [\App\Http\Controllers\Live\MainController::class, 'gallery'])
      ->name('gallery');
 
 Route::get('/contact-info', [\App\Http\Controllers\Live\MainController::class, 'index'])
