@@ -28473,13 +28473,17 @@ var _hoisted_5 = {
   "class": "text-center text-lg text-white font-bold"
 };
 var _hoisted_6 = ["href"];
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "mt-3 text-sm text-gray-200"
+}, " Event last July 2022. Places Magellan's Cross, Magallanes Street, Colon Street, Carbon Public Market ", -1 /* HOISTED */);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     "class": "w-full h-full object-cover",
     src: $props.album.tile
   }, null, 8 /* PROPS */, _hoisted_2), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     href: $props.album.link
-  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.album.title), 9 /* TEXT, PROPS */, _hoisted_6)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <p class=\"mt-3 text-sm text-gray-200\">\r\n          Event last July 2022. Places Magellan's Cross, Magallanes Street, Colon Street, Carbon Public Market\r\n        </p>")])])]);
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.album.title), 9 /* TEXT, PROPS */, _hoisted_6)]), _hoisted_7])])]);
 }
 
 /***/ }),

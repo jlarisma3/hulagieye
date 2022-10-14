@@ -6,9 +6,9 @@
         <h3 class="text-center text-lg text-white font-bold">
           <a :href="album.link">{{ album.title }}</a>
         </h3>
-<!--        <p class="mt-3 text-sm text-gray-200">
+        <p class="mt-3 text-sm text-gray-200">
           Event last July 2022. Places Magellan's Cross, Magallanes Street, Colon Street, Carbon Public Market
-        </p>-->
+        </p>
       </div>
     </div>
   </div>
