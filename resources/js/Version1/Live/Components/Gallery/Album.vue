@@ -5,7 +5,7 @@
     </div>
     <div class="overflow-y-hidden absolute text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
       <h3 class="text-center underline text-lg text-white font-normal">
-        <a :href="album.link">{{ album.title }}</a>
+        <inertia-link :href="album.link">{{ album.title }}</inertia-link>
       </h3>
       <!--        <p class="mt-3 text-sm text-gray-200">
                 Event last July 2022. Places Magellan's Cross, Magallanes Street, Colon Street, Carbon Public Market

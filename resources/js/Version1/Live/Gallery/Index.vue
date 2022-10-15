@@ -60,24 +60,13 @@
 <script>
 
 import AppLayout from "@/Version1/Live/Layout/App";
-import Wrap from "./Layout/Components/Wrap";
-import Album from "./Components/Gallery/Album";
+import Wrap from "../Layout/Components/Wrap";
+import Album from "../Components/Gallery/Album";
 
 export default {
   name: "Gallery",
 
-  components: { AppLayout, Wrap, Album },
-
-  setup() {
-    const sample = {
-      title: 'Fujifilm Photowalk 2022',
-      link: '#',
-      tile: 'http://web.personal/storage/gallery/DSCF6672.JPG'
-    };
-
-    return { sample }
-  }
-
+  components: { AppLayout, Wrap, Album }
 }
 </script>
 

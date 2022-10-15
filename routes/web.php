@@ -30,12 +30,16 @@ Route::get('/', [\App\Http\Controllers\Live\MainController::class, 'index'])
 Route::get('/bio', [\App\Http\Controllers\Live\MainController::class, 'bio'])
      ->name('bio');
 
-Route::get('/gallery', [\App\Http\Controllers\Live\GalleryController::class, 'index'])
-     ->name('gallery');
-
 Route::get('/contact-info', [\App\Http\Controllers\Live\MainController::class, 'index'])
      ->name('contact-info');
 
+Route::prefix('gallery')->group(function() {
+    Route::get('/', [\App\Http\Controllers\Live\GalleryController::class, 'index'])
+         ->name('gallery');
+
+    Route::get('album/{slug}', [\App\Http\Controllers\Live\GalleryController::class, 'album'])
+         ->name('gallery.album');
+});
 
 
 
