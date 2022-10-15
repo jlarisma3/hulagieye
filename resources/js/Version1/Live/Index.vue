@@ -18,14 +18,18 @@
           </div>
         </template>
       </wrap>
-      <wrap class="mt-20">
+<!--      <wrap class="mt-20">
         <template #wrap-content>
           <gallery />
-<!--          <div class="mt-20">
-
-          </div>-->
         </template>
-      </wrap>
+      </wrap>-->
+      <div class="sm:px-8 mt-20">
+        <div class="mx-auto max-w-7xl lg:px-8">
+          <div class="relative">
+            <gallery />
+          </div>
+        </div>
+      </div>
     </template>
   </app-layout>
 </template>

@@ -46,8 +46,8 @@
         <div class="mx-auto max-w-7xl lg:px-8">
           <div class="relative">
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-1">
-              <template v-for="album in $page.props.albums" :key="album.id">
-                <album :album="album" :class="{ 'sm:col-span-2' : album.cover.isPortrait == false }" />
+              <template v-for="(album, i) in $page.props.albums" :key="album.id">
+                <album :album="album" :class="{ 'sm:col-span-2' : album.cover.isPortrait == true && i < 4}" />
               </template>
             </div>
           </div>

@@ -28414,7 +28414,7 @@ var _hoisted_1 = {
   "class": "bg-white"
 };
 var _hoisted_2 = {
-  "class": "relative columns-1 sm:columns-3 gap-3"
+  "class": "relative columns-1 sm:columns-3 gap-1"
 };
 var _hoisted_3 = ["href"];
 var _hoisted_4 = {
@@ -28430,7 +28430,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   })])], 8 /* PROPS */, _hoisted_3), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.$page.props.images, function (item, i) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: item.name,
-      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["relative mt-3", {
+      "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["relative mt-1", {
         'aspect-w-16 aspect-h-9': item.isPortrait == true,
         'aspect-w-1 aspect-h-1': item.isPortrait == false,
         'mt-0': i == 0,
@@ -28566,12 +28566,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           return [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("            <div class=\"mx-auto w-4/5 mt-20\">\r\n              &lt;!&ndash; photowalk &ndash;&gt;\r\n              <album :album=\"sample\" class=\"h-96\" />\r\n              &lt;!&ndash; lava farm &ndash;&gt;\r\n              <album :album=\"sample\" class=\"h-96 mt-24\" />\r\n              &lt;!&ndash; noir &ndash;&gt;\r\n              <album :album=\"sample\" class=\"mt-24 h-96\" />\r\n              &lt;!&ndash; random people &ndash;&gt;\r\n              <album :album=\"sample\" class=\"mt-24 h-96\" />\r\n              &lt;!&ndash; pasigarbo sa sugbo &ndash;&gt;\r\n              <album :album=\"sample\" class=\"mt-24 h-96\" />\r\n              &lt;!&ndash; street daily &ndash;&gt;\r\n              <album :album=\"sample\" class=\"mt-24 h-96\" />\r\n            </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("          <div class=\"mt-20 columns-1 sm:columns-3 gap-6 space-y-6\">\r\n            <template v-for=\"(n, i) in 6\">\r\n              <album\r\n                  :album=\"sample\"\r\n                  :class=\"{\r\n                    'aspect-w-16 aspect-h-9': (i % 2) == 0,\r\n                    'aspect-w-1 aspect-h-1' : (i % 2) != 0,\r\n                    'mt-0' : i == 0, 'sm:mt-0' : i == 3 || i == 6, 'sm:block' : i > 3\r\n                    }\"\r\n              />\r\n            </template>\r\n          </div>")];
         }),
         _: 1 /* STABLE */
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.$page.props.albums, function (album) {
+      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.$page.props.albums, function (album, i) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_album, {
           key: album.id,
           album: album,
           "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)({
-            'sm:col-span-2': album.cover.isPortrait == false
+            'sm:col-span-2': album.cover.isPortrait == true && i < 4
           })
         }, null, 8 /* PROPS */, ["album", "class"]);
       }), 128 /* KEYED_FRAGMENT */))])])])])];
@@ -28608,7 +28608,15 @@ var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "mt-6 text-base text-zinc-600"
 }, " I'm Joe, senior software engineer and amateur street photographer based in Cebu City Philippines. I give medical advises for I am also a graduate from University of Google College of Medicine. ", -1 /* HOISTED */);
-
+var _hoisted_5 = {
+  "class": "sm:px-8 mt-20"
+};
+var _hoisted_6 = {
+  "class": "mx-auto max-w-7xl lg:px-8"
+};
+var _hoisted_7 = {
+  "class": "relative"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_avatar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("avatar");
   var _component_social = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("social");
@@ -28624,16 +28632,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           })])])];
         }),
         _: 1 /* STABLE */
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_wrap, {
-        "class": "mt-20"
-      }, {
-        "wrap-content": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_gallery), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("          <div class=\"mt-20\">\r\n\r\n          </div>")];
-        }),
-        _: 1 /* STABLE */
-      })];
+      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("      <wrap class=\"mt-20\">\r\n        <template #wrap-content>\r\n          <gallery />\r\n        </template>\r\n      </wrap>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_gallery)])])])];
     }),
-
     _: 1 /* STABLE */
   });
 }
