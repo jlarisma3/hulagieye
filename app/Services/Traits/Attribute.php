@@ -24,9 +24,20 @@ trait Attribute
      *
      * @return array|mixed
      */
-    public function get(array $attributes)
+    public function get(array $attributes = [])
     {
         $pub = [];
+
+        if(count($attributes) == 0) {
+            $props = (new \ReflectionClass($this))->getProperties();
+            foreach ($props as $prop) {
+                $pName = $prop->getName();
+                $pub[$pName] = $this->{$pName};
+            }
+
+            return $pub;
+        }
+
         foreach ($attributes as $prop) {
             $pub[$prop] = $this->{$prop};
         }

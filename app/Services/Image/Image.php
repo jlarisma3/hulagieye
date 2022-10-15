@@ -21,7 +21,10 @@ class Image
     public function __construct(array $attributes)
     {
         $fn = function ($class) {
-            $this->isPortrait = $class->width > $class->height;
+            if(!is_null($class->width) && !is_null($class->height)) {
+                //var_dump($class);
+                $this->isPortrait = $class->width > $class->height;
+            }
         };
 
         $this->init($attributes, $fn);

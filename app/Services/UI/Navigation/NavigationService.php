@@ -10,7 +10,7 @@ class NavigationService
 
     public function __construct()
     {
-        $navs = json_decode(file_get_contents(storage_path('app/config/navigation.json')), true);
+        $navs = getConfig('app/config/navigation.json');
 
         foreach ($navs as $nav) {
             $this->navigations[] = (new Navigation($nav))
