@@ -6,24 +6,21 @@
           <div class="mt-9">
             <div class="max-w-2xl">
               <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl">
-                Daily Street Photos, Travel, and anything in between.
+                {{ $page.props.album.title }}
               </h1>
               <p class="mt-6 text-base text-zinc-600">
-                I'm Joe, senior software engineer and amateur street photographer based in Cebu City Philippines. I give medical
-                advises for I am also a graduate from University of Google College of Medicine.
+                {{ $page.props.album.shortDescription }}
               </p>
             </div>
           </div>
         </template>
       </wrap>
+
+      <!-- album gallery -->
       <div class="sm:px-8 mt-20">
         <div class="mx-auto max-w-7xl lg:px-8">
           <div class="relative">
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-1">
-              <template v-for="(album, i) in $page.props.albums" :key="album.id">
-                <album :album="album" :class="{ 'sm:col-span-2' : album.cover.isPortrait == true && i < 4}" />
-              </template>
-            </div>
+            <album-gallery />
           </div>
         </div>
       </div>
@@ -35,12 +32,12 @@
 
 import AppLayout from "@/Version1/Live/Layout/App";
 import Wrap from "../Layout/Components/Wrap";
-import Album from "../Components/Gallery/Album";
+import AlbumGallery from "./Album/AlbumGallery";
 
 export default {
-  name: "Gallery",
+  name: "Album",
 
-  components: { AppLayout, Wrap, Album }
+  components: { AppLayout, Wrap, AlbumGallery }
 }
 </script>
 

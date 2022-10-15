@@ -1,6 +1,8 @@
 <?php
 namespace App\Services\Traits;
 
+use Illuminate\Support\Str;
+
 trait Attribute
 {
     /**
@@ -12,7 +14,7 @@ trait Attribute
     protected function init(array $attr, callable $fn)
     {
         foreach ($attr as $prop => $value) {
-            $this->{$prop} = $value;
+            $this->{Str::camel($prop)} = $value;
 
 
             if($fn) $fn($this);

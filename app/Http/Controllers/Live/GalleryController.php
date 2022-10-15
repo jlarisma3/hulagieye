@@ -38,10 +38,20 @@ class GalleryController extends Controller
         return Inertia::render('Live/Gallery/Index', $this->pageData['data']);
     }
 
+    /**
+     * @param Request $request
+     * @param string $slug
+     *
+     * @return \Inertia\Response
+     */
     public function album(Request $request, string $slug = '')
     {
         $this->pageData['data']['page_name'] = 'gallery';
 
-        return Inertia::render('Live/Gallery/Album/AlbumGallery', $this->pageData['data']);
+        $this->pageData['data']['album'] = $this->albumService
+            ->setAlbum($slug)
+            ->getAlbumPhotos();
+
+        return Inertia::render('Live/Gallery/Album', $this->pageData['data']);
     }
 }

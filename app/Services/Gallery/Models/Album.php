@@ -17,7 +17,15 @@ class Album
 
     private $link;
 
+    private $slug;
+
     private $cover;
+
+    private $url;
+
+    private $photos = [];
+
+    private $shortDescription;
 
     public function __construct(array $attributes)
     {
@@ -27,8 +35,22 @@ class Album
                 ->getImages();
 
             $this->cover = head($img);
+
+            if(!is_null($this->link) && !is_null($this->slug))
+                $this->url = route($this->link, ['slug' => $this->slug]);
         };
 
         $this->init($attributes, $fn);
+    }
+
+    public function loadPhotos()
+    {
+        $images = (new ImageService)
+            ->readFromDisk("gallery/album/$this->id/photos")
+            ->getImages();
+
+        $this->photos = $images;
+
+        return $this;
     }
 }
