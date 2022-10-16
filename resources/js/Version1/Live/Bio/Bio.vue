@@ -66,9 +66,9 @@
 <script>
 
 import AppLayout from "@/Version1/Live/Layout/App";
-import Wrap from "./Layout/Components/Wrap";
-import Social from "./Components/Social";
-import PageHeader from "./Components/PageHeader";
+import Wrap from "../Layout/Components/Wrap";
+import Social from "../Components/Social";
+import PageHeader from "../Components/PageHeader";
 
 export default {
   name: "Bio",

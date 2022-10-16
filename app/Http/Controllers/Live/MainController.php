@@ -41,7 +41,7 @@ class MainController extends Controller
 
         $this->pageData['data']['page_name'] = 'home';
 
-        return Inertia::render('Live/Index', $this->pageData['data']);
+        return Inertia::render('Live/Index/Index', $this->pageData['data']);
     }
 
     /**
@@ -57,6 +57,6 @@ class MainController extends Controller
             ->readFromDisk('bio')
             ->getImages());
 
-        return Inertia::render('Live/Bio', $this->pageData['data']);
+        return Inertia::render('Live/Bio/Bio', $this->pageData['data']);
     }
 }

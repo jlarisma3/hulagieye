@@ -35,7 +35,7 @@
 
 import AppLayout from "@/Version1/Live/Layout/App";
 import Wrap from "../Layout/Components/Wrap";
-import Album from "../Components/Gallery/Album";
+import Album from "./Components/Album";
 import PageHeader from "../Components/PageHeader";
 
 export default {
