@@ -4,15 +4,15 @@
       <wrap class="mt-16 sm:mt-32">
         <template #wrap-content>
           <div class="mt-9">
-            <div class="max-w-2xl">
-              <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl">
-                Daily Street Photos, Travel, and anything in between.
-              </h1>
-              <p class="mt-6 text-base text-zinc-600">
+            <page-header>
+              <template #title>
+                Street Photography, Portraits, Daily Photos, and anything in between.
+              </template>
+              <template #details>
                 I'm Joe, senior software engineer and amateur street photographer based in Cebu City Philippines. I give medical
                 advises for I am also a graduate from University of Google College of Medicine.
-              </p>
-            </div>
+              </template>
+            </page-header>
           </div>
         </template>
       </wrap>
@@ -36,11 +36,12 @@
 import AppLayout from "@/Version1/Live/Layout/App";
 import Wrap from "../Layout/Components/Wrap";
 import Album from "../Components/Gallery/Album";
+import PageHeader from "../Components/PageHeader";
 
 export default {
   name: "Gallery",
 
-  components: { AppLayout, Wrap, Album }
+  components: { AppLayout, Wrap, Album, PageHeader }
 }
 </script>
 

@@ -5,20 +5,20 @@
         <template #wrap-content>
           <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
             <div class="lg:pl-20">
-              <div class="max-w-none px-2.5 lg:max-w-none opacity-90 sm:max-w-xs">
+              <div class="max-w-none lg:max-w-none opacity-90 sm:max-w-xs">
                 <img :src="$page.props.bio_pic.path"
-                     class="aspect-square rounded-2xl bg-gray-100 object-cover"
+                     class="aspect-square rounded-2xl bg-gray-100 dark:bg-zinc-900 object-cover"
                      width="800"
                      height="800"
                 />
               </div>
             </div>
             <div class="lg:order-first lg:row-span-2">
-              <div class="max-w-2xl">
-                <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl">
+              <page-header>
+                <template #title>
                   I'm Joe Larisma. A proud lumad from Cebu City.
-                </h1>
-                <p class="mt-6 text-base text-zinc-600">
+                </template>
+                <template #details>
                   I'm Joe, senior software engineer and amateur street photographer based in Cebu City Philippines. I give medical
                   advises for I am also a graduate from University of Google College of Medicine.
 
@@ -41,13 +41,14 @@
                   pretium fringilla finibus. Vestibulum elementum at odio at egestas. Phasellus ipsum elit, bibendum bibendum euismod
                   sed, venenatis a erat. Nulla non ultrices elit. Suspendisse tincidunt sagittis nibh, at elementum metus tempus quis.
                   Maecenas ut dolor rhoncus, dictum purus et, egestas ex.
-                </p>
-              </div>
+                </template>
+              </page-header>
             </div>
             <div class="lg:pl-20">
               <ul role="list">
-                <li v-for="(item, i) in social" :key="item.name" :class="{'mt-4' : i != 0, 'mt-8 border-t border-gray-100 pt-8' : item.name == 'Email'}" class="flex">
-                  <a :href="item.href" class="group flex text-sm font-medium text-gray-600 transition hover:text-gray-700">
+                <li v-for="(item, i) in social" :key="item.name" :class="{'mt-4' : i != 0, 'mt-8 border-t border-gray-100 pt-8 dark:border-zinc-300/20' : item.name == 'Email'}" class="flex">
+                  <a :href="item.href"
+                     class="group flex text-sm font-medium text-gray-600 transition hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
                     <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
                     <span v-if="item.name != 'Email'" class="ml-4">Follow me on {{ item.name }}</span>
                     <span v-else class="ml-4">{{ item.href.replace('mailto:', '') }}</span>
@@ -67,11 +68,12 @@
 import AppLayout from "@/Version1/Live/Layout/App";
 import Wrap from "./Layout/Components/Wrap";
 import Social from "./Components/Social";
+import PageHeader from "./Components/PageHeader";
 
 export default {
   name: "Bio",
 
-  components: { AppLayout, Wrap, Social },
+  components: { AppLayout, Wrap, Social, PageHeader },
 
   computed: {
     social() {
