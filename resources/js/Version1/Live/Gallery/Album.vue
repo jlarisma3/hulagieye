@@ -4,14 +4,14 @@
       <wrap class="mt-16 sm:mt-32">
         <template #wrap-content>
           <div class="mt-9">
-            <div class="max-w-2xl">
-              <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl">
+            <page-header>
+              <template #title>
                 {{ $page.props.album.title }}
-              </h1>
-              <p class="mt-6 text-base text-zinc-600">
+              </template>
+              <template #details>
                 {{ $page.props.album.shortDescription }}
-              </p>
-            </div>
+              </template>
+            </page-header>
           </div>
         </template>
       </wrap>
@@ -33,11 +33,12 @@
 import AppLayout from "@/Version1/Live/Layout/App";
 import Wrap from "../Layout/Components/Wrap";
 import AlbumGallery from "./Album/AlbumGallery";
+import PageHeader from "../Components/PageHeader";
 
 export default {
   name: "Album",
 
-  components: { AppLayout, Wrap, AlbumGallery }
+  components: { AppLayout, Wrap, AlbumGallery, PageHeader }
 }
 </script>
 
