@@ -3,20 +3,13 @@
     <template #content>
       <wrap>
         <template #wrap-content>
-<!--          <div class="grid grid-cols-1 sm:grid-cols-12">
-
-            <div class="mt-9 col-span-9">
-
-            </div>
-          </div>-->
           <avatar />
           <page-header class="mt-10">
             <template #title>
-              Web engineer, Street photographer, and a frustrated culinarian.
+              Web engineer, street photographer, and a frustrated culinarian.
             </template>
             <template #details>
-              I'm Joe, senior software engineer and amateur street photographer based in Cebu City Philippines. I give medical
-              advises for I am also a graduate from University of Google College of Medicine.
+              I'm Joe, Senior Web Engineer and an smateur Street Photographer based in Cebu City Philippines.
             </template>
           </page-header>
           <social class="mt-6" />

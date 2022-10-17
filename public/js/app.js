@@ -28467,7 +28467,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_inertia_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("inertia-link");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_inertia_link, {
     href: $props.href,
-    "class": "inline-flex items-center rounded border border-transparent bg-indigo-600 dark:bg-teal-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-indigo-700 dark:hover:bg-teal-700 focus:outline-none focus:ring-1 dark:focus:ring-teal-500 focus:ring-indigo-500 focus:ring-offset-1"
+    "class": "inline-flex items-center rounded border border-transparent bg-green-600 dark:bg-teal-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-green-700 dark:hover:bg-teal-700 focus:outline-none focus:ring-1 dark:focus:ring-teal-500 focus:ring-green-500 focus:ring-offset-1"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")];
@@ -28854,7 +28854,7 @@ var _hoisted_2 = {
   "class": "grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mt-20"
 };
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "relative h-52 w-full rounded-md pl-0 sm:pr-5"
+  "class": "relative h-72 w-full rounded-md pl-0 sm:pr-5"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   src: "http://web.personal/assets/images/programming-1.JPG",
   "class": "object-cover w-full block h-full rounded-md"
@@ -28867,7 +28867,7 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }, "Web Engineer", -1 /* HOISTED */);
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "mt-6 text-base text-gray-600 dark:text-gray-400"
-}, "I'm Joe, senior software engineer and amateur street photographer based in Cebu City Philippines. I give medical advises for I am also a graduate from University of Google College of Medicine. ", -1 /* HOISTED */);
+}, " The goal is to develop and integrate both front-end and back-end based applications then deliver a robust product that meets both technical and consumer needs. ", -1 /* HOISTED */);
 var _hoisted_7 = {
   "class": "mt-10 lg:mt-20 order-last lg:order-none pl-0 lg:pr-5"
 };
@@ -28876,9 +28876,11 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 }, "Street Photographer", -1 /* HOISTED */);
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "mt-6 text-base text-gray-600 dark:text-gray-400"
-}, "I'm Joe, senior software engineer and amateur street photographer based in Cebu City Philippines. I give medical advises for I am also a graduate from University of Google College of Medicine. ", -1 /* HOISTED */);
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" The opportunity to capture people in their most honest state is something that I really love about this style of photography. "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", null, "\"The best thing about a picture is that it never changes, even when the people in it do.\""), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "block mt-2 text-right"
+}, "- Andy Warhol")], -1 /* HOISTED */);
 var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "relative mt-20 pl-0 lg:pl-5 h-52 w-full rounded-md"
+  "class": "relative mt-20 pl-0 lg:pl-5 h-72 w-full rounded-md"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   src: "http://web.personal/assets/images/photo-1.JPG",
   "class": "object-cover w-full block h-full rounded-md"
@@ -28895,7 +28897,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_user_icon, {
         "class": "h-4 w-4 mr-1"
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" See Bio ")];
+      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" See more in Bio ")];
     }),
     _: 1 /* STABLE */
   }, 8 /* PROPS */, ["href"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_button_link, {
@@ -28937,14 +28939,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     content: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_wrap, null, {
         "wrap-content": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("          <div class=\"grid grid-cols-1 sm:grid-cols-12\">\r\n\r\n            <div class=\"mt-9 col-span-9\">\r\n\r\n            </div>\r\n          </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_avatar), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_page_header, {
+          return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_avatar), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_page_header, {
             "class": "mt-10"
           }, {
             title: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-              return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Web engineer, Street photographer, and a frustrated culinarian. ")];
+              return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Web engineer, street photographer, and a frustrated culinarian. ")];
             }),
             details: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-              return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" I'm Joe, senior software engineer and amateur street photographer based in Cebu City Philippines. I give medical advises for I am also a graduate from University of Google College of Medicine. ")];
+              return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" I'm Joe, Senior Web Engineer and an smateur Street Photographer based in Cebu City Philippines. ")];
             }),
             _: 1 /* STABLE */
           }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_social, {
