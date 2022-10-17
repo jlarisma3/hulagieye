@@ -17,13 +17,11 @@
       </wrap>
 
       <!-- album gallery -->
-      <div class="sm:px-8 mt-20">
-        <div class="mx-auto max-w-7xl lg:px-8">
-          <div class="relative">
-            <album-gallery />
-          </div>
-        </div>
-      </div>
+      <wrap class="mt-20">
+        <template #wrap-content>
+          <album-gallery />
+        </template>
+      </wrap>
     </template>
   </app-layout>
 </template>

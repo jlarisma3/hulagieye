@@ -1,8 +1,8 @@
 <template>
   <footer class="mt-20">
-      <wrap :border="true">
+      <wrap>
         <template #wrap-content>
-          <div class="text-center pt-10 pb-10 dark:border-zinc-700/40">
+          <div class="text-center pt-10 pb-10 border-t border-gray-100 dark:border-zinc-300/20">
             <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
               <div v-for="item in $page.props.navigations" :key="item.title" class="px-5 py-2">
                 <inertia-link
