@@ -3,7 +3,7 @@
     <div class="border-t border-gray-100 dark:border-zinc-300/20"></div>
     <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 mt-20">
 
-      <div class="relative h-72 w-full rounded-md pl-0 sm:pr-5">
+      <div class="relative h-72 w-full rounded-md pl-0 lg:pr-5">
         <img src="http://web.personal/assets/images/programming-1.JPG"
              class="object-cover w-full block h-full rounded-md"
         />

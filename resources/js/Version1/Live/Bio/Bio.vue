@@ -24,7 +24,9 @@
 
                   <!-- skill rates -->
                   <div class="mt-6">
-                    <h3 class="font-bold tracking-tight text-gray-800 dark:text-gray-100 mb-6">Skill Rating:</h3>
+                    <h3 class="flex font-medium tracking-tight text-gray-800 dark:text-gray-100 mb-6">
+                      <cog6-tooth-icon class="w-6 h-6"/><span class="ml-3">Skill Rating</span>
+                    </h3>
                     <template v-for="(rate, i) in rates">
                       <progress-bar
                           :config="rate"
@@ -32,9 +34,43 @@
                       />
                     </template>
                   </div>
-
+                  <!-- work exp -->
+                  <div class="mt-6">
+                    <h3 class="flex font-medium tracking-tight text-gray-800 dark:text-gray-100 mb-6">
+                      <briefcase-icon class="w-6 h-6" /> <span class="ml-3">Work Experience</span>
+                    </h3>
+                    <ol class="mt-6 space-y-4">
+                      <li v-for="(item, i) in work" :key="item.name" class="flex gap-4">
+                        <div class="
+                          relative
+                          mt-1 flex h-10 w-10
+                          flex-none items-center
+                          justify-center rounded-full
+                          shadow-md shadow-zinc-800/5
+                          ring-1 ring-zinc-900/5 dark:border
+                          dark:border-zinc-700/50
+                          dark:bg-zinc-800 dark:ring-0"
+                        >
+                        </div>
+                        <dl class="flex flex-auto flex-wrap gap-x-2">
+                          <dt class="sr-only">Company</dt>
+                          <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                            {{ item.name }}
+                          </dd>
+                          <dt class="sr-only">Role</dt>
+                          <dd class="text-xs text-zinc-500 dark:text-zinc-400">
+                            {{ item.position }}
+                          </dd>
+                          <dt class="sr-only">Date</dt>
+                          <dd class="ml-auto text-xs text-zinc-400 dark:text-zinc-500">
+                            {{ item.years }}
+                          </dd>
+                        </dl>
+                      </li>
+                    </ol>
+                  </div>
                   <!-- photographer -->
-                  <div class="mt-20">
+<!--                  <div class="mt-20">
                     <i>As a street photographer ...</i>
                     <p class="my-6">
                       It all started with taking good photos with my sneaker collection until I got inspired with the photos
@@ -47,7 +83,7 @@
                     <inertia-link :href="route('gallery')">
                       <i>Visit my gallery for my photos ...</i>
                     </inertia-link>
-                  </div>
+                  </div>-->
                 </template>
               </page-header>
             </div>
@@ -76,7 +112,7 @@ import AppLayout from "@/Version1/Live/Layout/App";
 import Wrap from "../Layout/Components/Wrap";
 import Social from "../Components/Social";
 import PageHeader from "../Components/PageHeader";
-import { ChevronDoubleRightIcon } from "@heroicons/vue/24/solid";
+import { ChevronDoubleRightIcon, BriefcaseIcon, Cog6ToothIcon } from "@heroicons/vue/24/solid";
 import ProgressBar from "../Components/ProgressBar";
 
 export default {
@@ -88,7 +124,9 @@ export default {
     Social,
     PageHeader,
     ChevronDoubleRightIcon,
-    ProgressBar
+    ProgressBar,
+    BriefcaseIcon,
+    Cog6ToothIcon
   },
 
   computed: {
@@ -168,9 +206,33 @@ export default {
       }*/
     ];
 
+    const work = [
+      {
+        name: "Codev Phils.",
+        position: "Senior Web Engineer",
+        years: "2017 - present"
+      },
+      {
+        name: "Odusee Philippines Inc.",
+        position: "Project Manager",
+        years: "2013 - 2017"
+      },
+      {
+        name: "Odusee Philippines Inc.",
+        position: "Web Team Lead",
+        years: "2011 - 2013"
+      },
+      {
+        name: "A5trx",
+        position: "Javascript Developer",
+        years: "2009 - 2011"
+      }
+    ];
+
     return {
       skills,
-      rates
+      rates,
+      work
     }
   }
 }
