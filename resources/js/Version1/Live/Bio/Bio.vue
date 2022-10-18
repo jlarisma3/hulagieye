@@ -21,13 +21,8 @@
                 <template #details>
                   A Web Engineer with {{ (new Date).getFullYear() - 2009 }} years of experience specializes in
                   {{ getSkills }}.
-<!--                  <ul role="list" class="mt-3">
-                    <li v-for="(skill, i) in skills" :key="i" class="flex">
-                      <chevron-double-right-icon class="mt-2 w-3 h-3 mr-1" />
-                      {{ skill }}
-                    </li>
-                  </ul>-->
-                  <!-- separator -->
+
+                  <!-- skill rates -->
                   <div class="mt-6">
                     <h3 class="font-bold tracking-tight text-gray-800 dark:text-gray-100 mb-6">Skill Rating:</h3>
                     <template v-for="(rate, i) in rates">
@@ -37,6 +32,8 @@
                       />
                     </template>
                   </div>
+
+                  <!-- photographer -->
                   <div class="mt-20">
                     <i>As a street photographer ...</i>
                     <p class="my-6">
