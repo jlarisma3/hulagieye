@@ -28969,7 +28969,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
               return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Street Photography, Portraits, Daily Photos, and anything in between. ")];
             }),
             details: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-              return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" I'm Joe, senior software engineer and amateur street photographer based in Cebu City Philippines. I give medical advises for I am also a graduate from University of Google College of Medicine. ")];
+              return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Random strangers, Daily life of Cebuanos, Scenes from Cebu. Reaction time is everything. ")];
             }),
             _: 1 /* STABLE */
           })])];
@@ -29066,7 +29066,7 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "font-bold tracking-tight text-gray-800 dark:text-gray-100"
 }, "Web Engineer", -1 /* HOISTED */);
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "mt-6 text-base text-gray-600 dark:text-gray-400"
+  "class": "my-6 text-base text-gray-600 dark:text-gray-400"
 }, " The goal is to develop and integrate both front-end and back-end based applications then deliver a robust product that meets both technical and consumer needs. ", -1 /* HOISTED */);
 var _hoisted_7 = {
   "class": "mt-10 lg:mt-20 order-last lg:order-none pl-0 lg:pr-5"
@@ -29075,7 +29075,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "font-bold tracking-tight text-gray-800 dark:text-gray-100"
 }, "Street Photographer", -1 /* HOISTED */);
 var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "mt-6 text-base text-gray-600 dark:text-gray-400"
+  "class": "my-6 text-base text-gray-600 dark:text-gray-400"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" The opportunity to capture people in their most honest state is something that I really love about this style of photography. "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", null, "\"The best thing about a picture is that it never changes, even when the people in it do.\""), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "block mt-2 text-right"
 }, "- Andy Warhol")], -1 /* HOISTED */);
@@ -29087,30 +29087,24 @@ var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 })], -1 /* HOISTED */);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _component_user_icon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("user-icon");
-  var _component_button_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("button-link");
-  var _component_photo_icon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("photo-icon");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_button_link, {
-    href: _ctx.route('bio'),
-    "class": "flex mt-6"
+  var _component_inertia_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("inertia-link");
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    "class": "text-sm dark:text-teal-600",
+    href: _ctx.route('bio')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_user_icon, {
-        "class": "h-4 w-4 mr-1"
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" See more in Bio ")];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" See more in Bio... ")];
     }),
     _: 1 /* STABLE */
-  }, 8 /* PROPS */, ["href"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_button_link, {
-    href: _ctx.route('gallery'),
-    "class": "flex mt-6"
+  }, 8 /* PROPS */, ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <button-link :href=\"route('bio')\" class=\"flex mt-6\">\r\n          <user-icon class=\"h-4 w-4 mr-1\" /> See more in Bio\r\n        </button-link>")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    "class": "text-sm dark:text-teal-600",
+    href: _ctx.route('gallery')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_photo_icon, {
-        "class": "h-4 w-4 mr-1"
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" See more in gallery ")];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" See more in gallery... ")];
     }),
     _: 1 /* STABLE */
-  }, 8 /* PROPS */, ["href"])]), _hoisted_10])]);
+  }, 8 /* PROPS */, ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <button-link :href=\"route('gallery')\" class=\"flex mt-6\">\r\n          <photo-icon class=\"h-4 w-4 mr-1\" /> See more in gallery\r\n        </button-link>")]), _hoisted_10])]);
 }
 
 /***/ }),

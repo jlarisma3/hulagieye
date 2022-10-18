@@ -9,8 +9,7 @@
                 Street Photography, Portraits, Daily Photos, and anything in between.
               </template>
               <template #details>
-                I'm Joe, senior software engineer and amateur street photographer based in Cebu City Philippines. I give medical
-                advises for I am also a graduate from University of Google College of Medicine.
+                Random strangers, Daily life of Cebuanos, Scenes from Cebu. Reaction time is everything.
               </template>
             </page-header>
           </div>
