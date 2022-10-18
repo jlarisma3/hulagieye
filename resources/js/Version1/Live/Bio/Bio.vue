@@ -19,28 +19,38 @@
                   I'm Joe Larisma. A proud lumad from Cebu City.
                 </template>
                 <template #details>
-                  I'm Joe, senior software engineer and amateur street photographer based in Cebu City Philippines. I give medical
-                  advises for I am also a graduate from University of Google College of Medicine.
-
-                  <br><br>
-
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas maximus commodo elit, fringilla consequat
-                  felis elementum quis. Suspendisse pulvinar tempor nisl, ut vestibulum arcu iaculis eget. In volutpat nibh eget
-                  purus placerat molestie. Cras at ultrices erat. Proin quam arcu, gravida vitae vulputate quis, lacinia in lorem.
-                  Donec mi ante, vulputate sed diam a, vulputate porttitor sapien. Cras ultrices magna est. Nullam eget justo facilisis,
-                  sodales arcu ac, dictum dui. Praesent rhoncus velit sit amet felis convallis, in tincidunt nisi rutrum. Donec quis est
-                  et orci accumsan varius. Fusce gravida condimentum feugiat. Sed a aliquet nisl, sed ultrices eros. Praesent quis feugiat
-                  metus. Pellentesque ullamcorper gravida lorem vestibulum faucibus. Curabitur at metus id ipsum commodo semper in eu ex.
-                  Sed tempor ac nulla sit amet dictum.
-
-                  <br><br>
-
-                  Praesent sed mattis risus. Sed sodales tristique nibh, eget viverra augue bibendum id. Sed in volutpat ante. Quisque
-                  non risus volutpat, molestie elit vitae, mollis est. Phasellus sit amet purus arcu. Vestibulum ante ipsum primis in
-                  faucibus orci luctus et ultrices posuere cubilia curae; Morbi ornare mi sollicitudin nibh mollis rhoncus. Mauris
-                  pretium fringilla finibus. Vestibulum elementum at odio at egestas. Phasellus ipsum elit, bibendum bibendum euismod
-                  sed, venenatis a erat. Nulla non ultrices elit. Suspendisse tincidunt sagittis nibh, at elementum metus tempus quis.
-                  Maecenas ut dolor rhoncus, dictum purus et, egestas ex.
+                  A Web Engineer with {{ (new Date).getFullYear() - 2009 }} years of experience specializes in
+                  {{ getSkills }}.
+<!--                  <ul role="list" class="mt-3">
+                    <li v-for="(skill, i) in skills" :key="i" class="flex">
+                      <chevron-double-right-icon class="mt-2 w-3 h-3 mr-1" />
+                      {{ skill }}
+                    </li>
+                  </ul>-->
+                  <!-- separator -->
+                  <div class="mt-6">
+                    <h3 class="font-bold tracking-tight text-gray-800 dark:text-gray-100 mb-6">Skill Rating:</h3>
+                    <template v-for="(rate, i) in rates">
+                      <progress-bar
+                          :config="rate"
+                          class="mb-3"
+                      />
+                    </template>
+                  </div>
+                  <div class="mt-20">
+                    <i>As a street photographer ...</i>
+                    <p class="my-6">
+                      It all started with taking good photos with my sneaker collection until I got inspired with the photos
+                    took by some of my friends who are also in to photography. <br><br>But lately, it has been more of a therapy.
+                      I always get lost in thoughts when I start shooting.
+                      <br><br>
+                      I haven't been so passionate when it comes to a hobby but this is one thing that I really want to be
+                      good at.
+                    </p>
+                    <inertia-link :href="route('gallery')">
+                      <i>Visit my gallery for my photos ...</i>
+                    </inertia-link>
+                  </div>
                 </template>
               </page-header>
             </div>
@@ -69,15 +79,101 @@ import AppLayout from "@/Version1/Live/Layout/App";
 import Wrap from "../Layout/Components/Wrap";
 import Social from "../Components/Social";
 import PageHeader from "../Components/PageHeader";
+import { ChevronDoubleRightIcon } from "@heroicons/vue/24/solid";
+import ProgressBar from "../Components/ProgressBar";
 
 export default {
   name: "Bio",
 
-  components: { AppLayout, Wrap, Social, PageHeader },
+  components: {
+    AppLayout,
+    Wrap,
+    Social,
+    PageHeader,
+    ChevronDoubleRightIcon,
+    ProgressBar
+  },
 
   computed: {
     social() {
       return this.socialObject();
+    },
+
+    getSkills() {
+      return this.skills.join(', ');
+    }
+  },
+
+  setup() {
+    const skills = [
+      'Front-end',
+      'Back-end',
+      'Database Design',
+      'Server Administration',
+      'Project Management',
+      'API Development',
+      'Web Deployment',
+      'Project Delivery'
+    ];
+
+    const rates = [
+      {
+        label: "HTML / CSS / TailwindCSS / Boostrap",
+        score: 9
+      },
+      /*{
+        label: "CSS",
+        score: 8
+      },*/
+      {
+        label: "Javascript / VueJs / ReactJs",
+        score: 9
+      },
+      {
+        label: "PHP / Laravel / Yii / Symfony",
+        score: 9
+      },
+      {
+        label: "MySQL / MariaDB / PostgreSql",
+        score: 9
+      },
+      {
+        label: "Linux System",
+        score: 7
+      },
+      /*{
+        label: "Laravel Framework",
+        score: 9
+      },
+      {
+        label: "TailwindCSS",
+        score: 8
+      },
+      {
+        label: "VueJs",
+        score: 9
+      },
+      {
+        label: "Vagrant",
+        score: 9
+      },
+      {
+        label: "Docker",
+        score: 6
+      },
+      {
+        label: "ReactJS",
+        score: 6
+      },
+      {
+        label: "Flutter",
+        score: 5
+      }*/
+    ];
+
+    return {
+      skills,
+      rates
     }
   }
 }
