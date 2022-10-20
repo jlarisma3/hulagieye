@@ -24,7 +24,6 @@
           </div>
         </template>
       </wrap>
-
     </template>
   </app-layout>
 </template>

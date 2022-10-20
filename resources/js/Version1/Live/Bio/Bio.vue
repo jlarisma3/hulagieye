@@ -34,6 +34,7 @@
                       />
                     </template>
                   </div>
+
                   <!-- work exp -->
                   <div class="mt-6">
                     <h3 class="flex font-medium tracking-tight text-gray-800 dark:text-gray-100 mb-6">
@@ -51,6 +52,7 @@
                           dark:border-zinc-700/50
                           dark:bg-zinc-800 dark:ring-0"
                         >
+                          <img :src="avatarUrl.replace('{name}', item.name)" class="w-7 h-7 bg-transparent" />
                         </div>
                         <dl class="flex flex-auto flex-wrap gap-x-2">
                           <dt class="sr-only">Company</dt>
@@ -136,6 +138,10 @@ export default {
 
     getSkills() {
       return this.skills.join(', ');
+    },
+
+    avatarUrl() {
+      return 'https://ui-avatars.com/api/?name={name}&color=FFF&background=000&rounded=true';
     }
   },
 
